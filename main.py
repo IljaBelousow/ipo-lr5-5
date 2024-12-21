@@ -1,14 +1,14 @@
 slovo = input("Введите слово: ")
 
-gласные = set("аоуюыэиеёюя")
-soft_hard_signs = set("ьъ")
+glasn = set("аоуюыэиеёюя")
+razdel = set("ьъ")
 
 index = 0
 
 for i in slovo:
     index += 1  
     # Проверяем чем является ли буква 
-    if i in gласные or i in soft_hard_signs:
+    if i in glasn or i in razdel:
         continue 
 
     print(i, " - согласный / буква номер - ", index)
