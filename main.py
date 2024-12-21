@@ -1,10 +1,14 @@
-slovo = str(input("vvedite slovo "))
+slovo = input("Введите слово: ")
+
+gласные = set("аоуюыэиеёюя")
+soft_hard_signs = set("ьъ")
+
 index = 0
-for i in slovo:#проходит по slovo
-    index += 1
-    if i == "а" or i == "о" or i == "у" or i == "ы" or i == "э" or i == "и" or i == "е" or i == "ё" or i == "ю" or i == "я":#выводит ничего
-        print("")
-    elif i == "ь" or i =="ъ":#выводит ничего
-        print("")
-    else:#иначе выводит согласную юукву и её номер
-        print(i, " - согласный / буква номер - ", index)
+
+for i in slovo:
+    index += 1  
+    # Проверяем чем является ли буква 
+    if i in gласные or i in soft_hard_signs:
+        continue 
+
+    print(i, " - согласный / буква номер - ", index)
